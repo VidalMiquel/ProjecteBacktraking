@@ -13,7 +13,6 @@ public class Tauler {
         
     }
     
-    
     private void inicialitzarTauler(){
         casella = new Casella[dimensio][dimensio];
         for(int i = 0; i< dimensio; i++){
@@ -29,7 +28,6 @@ public class Tauler {
     }
 
     
-
     public int getNumeroCasellesOcupades() {
         return numeroCasellesOcupades;
     }
@@ -54,7 +52,6 @@ public class Tauler {
           }
           tmp = tmp + "\n";
       }
-      
       return tmp;
     }
     
