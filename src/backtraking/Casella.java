@@ -26,7 +26,4 @@ public class Casella {
         this.ocupada = ocupada;
     }
     
-    
-  
-  
 }

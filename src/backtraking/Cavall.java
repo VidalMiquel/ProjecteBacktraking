@@ -17,13 +17,9 @@ public class Cavall {
     }
     public int [][] aplicarOperandos(int x, int y){
         int[][] matriuOperandos = new int [dimensioX][dimensioY];
-        
-    
             for(int j = 0; j<dimensioY; j++){
                 matriuOperandos[0][j]= matriu[0][j] + x;
-                matriuOperandos[1][j]= matriu[1][j] + y;
-               
-                
+                matriuOperandos[1][j]= matriu[1][j] + y; 
             }
         return matriuOperandos;
     }
