@@ -9,17 +9,23 @@ public class Backtraking {
     
     public void programaPrincipal(){
         Cavall objecte = new Cavall();
-        Tauler tablero = new Tauler(3);
+        System.out.println("DIMENSIO TAULER: ");
+        int dimensio = LT.readInt();
+        Tauler tablero = new Tauler(dimensio);
         int [][] aux;
+        int [][] operandos;
         System.out.println(tablero.toString());
-      if(tablero.maximaDimensio(4,3)){
-          System.out.println("Tamany Correcte");
-      }else{
-          System.out.println("Tamany incorrecte");
-      }
       
         System.out.println(objecte.toString());
-        aux = objecte.aplicarOperandos(1, 2);
+        
+        System.out.println("CASELLA QUE OCUPARA INICIALMENT EL CAVALL");
+        System.out.print("COORDENADA X: ");
+        int x = LT.readInt();
+        System.out.print("COORDENADA Y: ");
+        int y = LT.readInt();
+        
+        aux = Cavall.aplicarOperandos(x, y);
+        
         
         for(int i = 0; i<2; i++){
             for(int j = 0; j<8; j++){
@@ -27,6 +33,16 @@ public class Backtraking {
             }
             System.out.println("\n");
         }
+        
+        operandos = tablero.verificacioPosicions(aux);
+        
+         for(int i = 0; i<2; i++){
+            for(int j = 0; j<8; j++){
+                System.out.print(operandos[i][j] + " ");
+            }
+            System.out.println("\n");
+        }
+        
     }
     
 }
