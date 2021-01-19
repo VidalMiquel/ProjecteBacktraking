@@ -38,8 +38,25 @@ public class Tauler {
     
     public boolean maximaDimensio(int x, int y){
         
-        return !(((x<0)||(x>dimensio))||((y<0)||(y>dimensio)));
+        return !(((x<0)||(x>dimensio-1))||((y<0)||(y>dimensio-1)));
     }
+    
+    
+    
+    public int [][] verificacioPosicions(int [][] resultat){
+        int [][] auxiliar = new int [2][8];
+        
+            int i = 0;
+            for(int j = 0; j<8; j++){
+                if(maximaDimensio(resultat[0][j], resultat[1][j])){
+                    auxiliar[0][i]= resultat[0][j];
+                    auxiliar[1][i]= resultat[1][j]; 
+                    i++;
+                }
+            }
+            return auxiliar;
+        }
+                
     
     @Override
     public String  toString(){

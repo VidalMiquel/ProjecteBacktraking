@@ -15,7 +15,7 @@ public class Cavall {
         System.out.println(matriu[0][0]);
         System.out.println(matriu[1][7]);
     }
-    public int [][] aplicarOperandos(int x, int y){
+    public  static int [][] aplicarOperandos(int x, int y){
         int[][] matriuOperandos = new int [dimensioX][dimensioY];
             for(int j = 0; j<dimensioY; j++){
                 matriuOperandos[0][j]= matriu[0][j] + x;
