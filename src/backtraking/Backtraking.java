@@ -8,6 +8,8 @@ public class Backtraking {
     }
     
     public void programaPrincipal(){
+        Algoritme recursiu = new Algoritme();
+        Resultat ob = new Resultat();
         Cavall objecte = new Cavall();
         System.out.println("DIMENSIO TAULER: ");
         int dimensio = LT.readInt();
@@ -36,15 +38,22 @@ public class Backtraking {
         }
         
         
+        
+        
         operandos = tablero.verificacioPosicions(aux);
         
-         for(int i = 0; i<operandos.length; i++){
+        for(int i = 0; i<operandos.length; i++){
             for(int j = 0; j<2; j++){
                 System.out.print(operandos[i][j] + " ");
             }
             System.out.println("\n");
         }
-         
+        
+      ob =  recursiu.existeixenOperadorsAplicables(operandos);
+        
+        System.out.println(ob.matriuToString());
+        System.out.println("");
+     
          
          
          

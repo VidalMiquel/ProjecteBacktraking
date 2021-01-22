@@ -4,7 +4,6 @@ package backtraking;
 public class Casella {
   private int numeroPases;
   private boolean ocupada;
-  private int numeroCicles;
   
   public Casella(){
       
@@ -26,6 +25,10 @@ public class Casella {
 
     public void setOcupada(boolean ocupada) {
         this.ocupada = ocupada;
+    }
+
+    public void setNumeroPases(int numeroPases) {
+        this.numeroPases = numeroPases;
     }
     
     public boolean movimentsRealitzats(int i){
