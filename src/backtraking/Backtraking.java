@@ -24,24 +24,30 @@ public class Backtraking {
         System.out.print("COORDENADA Y: ");
         int y = LT.readInt();
         
+               
         aux = Cavall.aplicarOperandos(x, y);
         
         
-        for(int i = 0; i<2; i++){
-            for(int j = 0; j<8; j++){
+        for(int i = 0; i<8; i++){
+            for(int j = 0; j<2; j++){
                 System.out.print(aux[i][j] + " ");
             }
             System.out.println("\n");
         }
         
+        
         operandos = tablero.verificacioPosicions(aux);
         
-         for(int i = 0; i<2; i++){
-            for(int j = 0; j<8; j++){
+         for(int i = 0; i<operandos.length; i++){
+            for(int j = 0; j<2; j++){
                 System.out.print(operandos[i][j] + " ");
             }
             System.out.println("\n");
         }
+         
+         
+         
+         
         
     }
     
