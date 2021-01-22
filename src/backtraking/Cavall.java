@@ -3,23 +3,21 @@ package backtraking;
 
 public class Cavall {
  
-    private static final int [][] matriu = {{2,1,-1,-2,-2,-1,1,2},{-1,-2,-2,-1,1,2,2,1}};
-    private static final int dimensioX = 2;
-    private static int dimensioY = 8;
+ 
+    private static final int [][] matriu = {{2,-1},{1,-2},{-1,-2},{-2,-1},{-2,1},{-1,2},{1,2},{2,1}};
+    private static final int dimensioX = 8;
+    private static int dimensioY = 2;
 
     public Cavall(){
         
     }
     
-    public void imprimirLon(){
-        System.out.println(matriu[0][0]);
-        System.out.println(matriu[1][7]);
-    }
+   
     public  static int [][] aplicarOperandos(int x, int y){
         int[][] matriuOperandos = new int [dimensioX][dimensioY];
-            for(int j = 0; j<dimensioY; j++){
-                matriuOperandos[0][j]= matriu[0][j] + x;
-                matriuOperandos[1][j]= matriu[1][j] + y; 
+            for(int j = 0; j<dimensioX; j++){
+                matriuOperandos[j][0]= matriu[j][0] + x;
+                matriuOperandos[j][1]= matriu[j][1] + y; 
             }
         return matriuOperandos;
     }
