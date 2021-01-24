@@ -41,7 +41,7 @@ public class Backtraking {
         
         
         operandos = tablero.verificacioPosicions(aux);
-        
+        System.out.println(operandos.length + "long matriu operandos");
         for(int i = 0; i<operandos.length; i++){
             for(int j = 0; j<2; j++){
                 System.out.print(operandos[i][j] + " ");
@@ -54,6 +54,10 @@ public class Backtraking {
         System.out.println(ob.matriuToString());
         System.out.println("");
      
+        
+       recursiu.anotarEstatResultant(x, y);
+       recursiu.anotarEstatResultant(2, 2);
+       
          
          
          

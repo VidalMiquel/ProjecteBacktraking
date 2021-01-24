@@ -57,7 +57,7 @@ public class Tauler {
     public int[][] verificacioPosicions(int[][] resultat) {
 
         int[][] auxiliar = new int[8][2];
-          int [][]aux = null;
+        int [][]aux;
         int longitud = 0;
 
         int i = 0;
@@ -66,10 +66,14 @@ public class Tauler {
                 auxiliar[i][0] = resultat[j][0];
                 auxiliar[i][1] = resultat[j][1];
                 i++;
+            }else{
+                auxiliar[i][0] = -1;
+                auxiliar[i][1] = -1;
+                i++;
             }
         }
         for (int r = 0; r < 8; r++) {
-            if (!(auxiliar[r][0] == 0 && auxiliar[r][1] == 0)) {
+            if (!(auxiliar[r][0] == -1 && auxiliar[r][1] == -1)) {
                 longitud++;
             }
         }
@@ -79,7 +83,7 @@ public class Tauler {
 
             int z = 0;
             for (int t = 0; t < 8; t++) {
-                if (!(auxiliar[t][0] == 0 && auxiliar[t][1] == 0)) {
+                if (!(auxiliar[t][0] == -1 && auxiliar[t][1] == -1)) {
                     aux[z][0] = auxiliar[t][0];
                     aux[z][1] = auxiliar[t][1];
                     z++;
