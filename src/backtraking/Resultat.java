@@ -9,6 +9,7 @@ public class Resultat {
 
     }
 
+    //GETTERS I SETTERS 
     public boolean isResultat() {
         return resultat;
     }
@@ -25,6 +26,7 @@ public class Resultat {
         this.matriu = matriu;
     }
 
+    //IMPRIMIR PER PANTALLA LA MATRIU ASSOCIADA AL ATRIBUT MATRIU
     public String matriuToString() {
         String tmp = "";
         for (int i = 0; i < matriu.length; i++) {
