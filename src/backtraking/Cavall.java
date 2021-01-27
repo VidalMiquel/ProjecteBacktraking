@@ -13,6 +13,9 @@ public class Cavall {
     }
     
    
+    //MÈTODE QUE INTERACCIONA LA MATRIU ESTÀTICA I LA CASELLA ON ES TROBA EL CAVALL
+    //RETORNA TOTS ELS POSSIBLES MOVIMENTS QUE POT FER EL CAVALL DONADA LA CASELLA
+    //PASSADA PER PARÀMETRE
     public  static int [][] aplicarOperandos(int x, int y){
         int[][] matriuOperandos = new int [dimensioX][dimensioY];
             for(int j = 0; j<dimensioX; j++){
@@ -22,6 +25,7 @@ public class Cavall {
         return matriuOperandos;
     }
     
+    //MÈTODE ToSTRING PER IMPRIMIR LA MATRIU ESTÀTICA
     @Override
     public String toString(){
         String tmp = "";

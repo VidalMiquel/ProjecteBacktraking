@@ -6,9 +6,7 @@ public class Tauler {
     private int numeroCasellesOcupades;
     private Casella[][] casella;
 
-    public Casella[][] getCasella() {
-        return casella;
-    }
+  
 
     public Tauler(int dimensio) {
         this.dimensio = dimensio;
@@ -16,7 +14,7 @@ public class Tauler {
         inicialitzarTauler();
 
     }
-
+    //INICIL
     private void inicialitzarTauler() {
         casella = new Casella[dimensio][dimensio];
         for (int i = 0; i < dimensio; i++) {
@@ -26,7 +24,10 @@ public class Tauler {
         }
 
     }
-
+    //GETTERS I SETTERS DELS ATRIBUTS
+    public Casella[][] getCasella() {
+        return casella;
+    }
     public int getDimensio() {
         return dimensio;
     }
@@ -38,12 +39,14 @@ public class Tauler {
     public void setNumeroCasellesOcupades() {
         this.numeroCasellesOcupades++;
     }
-
+    
+    //MÈTODE QUE COMPROVA SI LA CASELLA PASSADA PER PARÀMETRE ÉS TROBA DEDINS DEL TAULER
     public boolean maximaDimensio(int x, int y) {
 
         return !(((x < 0) || (x > dimensio - 1)) || ((y < 0) || (y > dimensio - 1)));
     }
 
+    //MÈTODE QUE
     private int dimensioFinal(int x, int y) {
 
         int resultat = 0;
@@ -54,6 +57,9 @@ public class Tauler {
         return resultat;
     }
 
+    //MÈTODE QUE COMPROVA LES CASELLES A LES QUALS ES POT MOURE EL CAVALL
+    //RETORNA UNA ARRAY AMB UNA LONGUITUD IGUAL A LA QUANTITAT DE CASELLES A LA 
+    //QUAL ES POT MOURE EL CAVALL
     public int[][] verificacioPosicions(int[][] resultat) {
 
         int[][] auxiliar = new int[8][2];
@@ -93,13 +99,12 @@ public class Tauler {
        return aux; 
     }
 
+    //MÈTODE PER IMPRIMIR EL TAURELL PER PANTALLA
     @Override
     public String toString() {
         String tmp = "";
         for (int i = 0; i < dimensio; i++) {
             for (int j = 0; j < dimensio; j++) {
-                // tmp = tmp + "Posicio " +i+j + " ";
-                // System.out.println(i + " " + j );
                 tmp = tmp + casella[i][j].getNumeroPases() + " ";
             }
             tmp = tmp + "\n";

@@ -10,7 +10,7 @@ public class Casella {
       numeroPases = 0;
       ocupada = false;
   }
-
+    //GETTERS I SETTERS
     public int getNumeroPases() {
         return numeroPases;
     }
@@ -31,9 +31,11 @@ public class Casella {
         this.numeroPases = numeroPases;
     }
     
+    //MÈTODE COMPROVA SI EL NUMERO DE PASSES REALITZATS PER ARRIBAR A UNA CASELLA
+    //ES IGUAL A LA DIMENIO DEL TAURELL
     public boolean movimentsRealitzats(int i){
         
-        return !(numeroPases<((i*i)-1));
+        return !(numeroPases<((i*i)+1));
     }
     
 }
