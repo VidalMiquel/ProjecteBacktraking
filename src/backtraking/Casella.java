@@ -6,7 +6,7 @@ public class Casella {
   private boolean ocupada;
   
   public Casella(){
-      numeroPases = 0;
+      numeroPases = -1;
       ocupada = false;
   }
 

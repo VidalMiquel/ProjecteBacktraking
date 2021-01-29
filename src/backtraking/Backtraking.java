@@ -4,7 +4,7 @@ public class Backtraking {
 
     
     public static void main(String[] args) {
-        new Backtraking().programaPrincipal();
+        KnightTour.solveKT();
     }
     
     public void programaPrincipal(){
@@ -25,8 +25,7 @@ public class Backtraking {
         int y = LT.readInt();
         
         aux = Cavall.aplicarOperandos(x, y);
-        
-        
+
         for(int i = 0; i<2; i++){
             for(int j = 0; j<8; j++){
                 System.out.print(aux[i][j] + " ");
